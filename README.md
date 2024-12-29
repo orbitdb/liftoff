@@ -34,7 +34,7 @@ OrbitDB Liftoff also includes default Libp2p configurations for Node.js and brow
 import { createOrbitDB } from '@orbitdb/core'
 import { DefaultLibp2pOptions } from '@orbitdb/liftoff'
 
-const libp2p = createLibp2p({ ...DefaultLibp2pOptions })
+const libp2p = await createLibp2p({ ...DefaultLibp2pOptions })
 const ipfs = await createHelia({ libp2p })
 
 const orbitdb = await createOrbitDB({ ipfs })
